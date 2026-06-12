@@ -61,6 +61,72 @@ h2 {font-size: clamp(1.25rem, 3vw, 2rem);}
 h3 {font-size: clamp(1rem, 2.5vw, 1.5rem);}
 p  {font-size: clamp(0.875rem, 2vw, 1rem);}
 
+/* --- Layout switch to CSS Grid for larger screens --- */
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main"
+      "footer footer";
+    min-height: 100vh;
+  }
+
+  #sidebar {
+    position: static; /* remove off‑canvas */
+    inset-inline-start: 0;
+    height: auto;
+    grid-area: sidebar;
+    transform: none;
+    width: 250px;
+    padding: 1rem;
+  }
+
+  #top-header {
+    grid-area: header;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  #main-content {
+    grid-area: main;
+    padding: 2rem;
+  }
+
+  #summary-footer {
+    grid-area: footer;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+  body {
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-areas:
+      "sidebar header header"
+      "sidebar main   aside"
+      "footer  footer  footer";
+  }
+
+  #sidebar {
+    width: 300px;
+  }
+
+  /* Placeholder for future right‑hand aside (e.g., notifications) */
+  aside#right-panel {
+    grid-area: aside;
+    background: var(--color-secondary);
+    color: #fff;
+    padding: 1rem;
+  }
+}
+
 /* --- Layout components ------------------------------------------------- */
 #sidebar {
   position: fixed;
@@ -104,4 +170,3 @@ a:focus, button:focus, input:focus {
   outline: 2px solid var(--color-secondary);
   outline-offset: 2px;
 }
-
