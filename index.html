@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinTech Crypto Analytics Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Navigation Sidebar (will become drawer on mobile) -->
+  <nav id="sidebar" role="navigation" aria-label="Main navigation">
+    <h2 class="visually-hidden">Navigation</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Markets</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+
+  <!-- Top Header / Search Bar -->
+  <header id="top-header">
+    <h1>Crypto Analytics Dashboard</h1>
+    <input type="search" id="search" placeholder="Search assets..." aria-label="Search assets" />
+  </header>
+
+  <!-- Main Performance Content Canvas -->
+  <main id="main-content">
+    <section id="overview" aria-label="Performance overview">
+      <h2>Performance Overview</h2>
+      <p>Placeholder for performance charts and key metrics.</p>
+    </section>
+    <section id="assets" aria-label="Asset cards">
+      <h2>Assets</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Bitcoin (BTC)</h3>
+          <p>Price: $xx,xx</p>
+        </article>
+        <article class="card">
+          <h3>Ethereum (ETH)</h3>
+          <p>Price: $xx,xx</p>
+        </article>
+        <!-- More placeholder cards can be added -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Summary Footer -->
+  <footer id="summary-footer" role="contentinfo">
+    <p>&copy; 2026 DecodeLabs Industrial Training Kit. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
